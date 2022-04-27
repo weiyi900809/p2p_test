@@ -18,6 +18,6 @@ node.connect_with_node('123.240.196.78', 10001)
 node.send_to_nodes('{"message": "hi from node connecter_1"}') 
 
 
-
+time.sleep(10)
 # Gracefully stop the node.
 node.stop()
