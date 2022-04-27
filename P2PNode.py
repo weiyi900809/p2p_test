@@ -21,6 +21,7 @@ class P2PNode (Node):
         print("outbound_node_connected (" + self.id + "): " + node.id+ " ip: " + node.host + " port: " + str(node.port))
         
     def inbound_node_connected(self, node):
+        self.connect_with_node(node.host, node.port) #如果有node連接我,我會返回去連接對方
         print("inbound_node_connected: (" + self.id + "): " + node.id+ " ip: " + node.host + " port: " + str(node.port))
 
     def inbound_node_disconnected(self, node):
