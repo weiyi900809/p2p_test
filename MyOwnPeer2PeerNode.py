@@ -18,19 +18,19 @@ class MyOwnPeer2PeerNode (Node):
     # implement your network node behavior to create the required functionality.
 
     def outbound_node_connected(self, node):
-        print("outbound_node_connected (" + self.id + "): " + node.id)
+        print("outbound_node_connected (" + self.id + "): " + node.id+ " ip: " + node.host + " port: " + str(node.port))
         
     def inbound_node_connected(self, node):
-        print("inbound_node_connected: (" + self.id + "): " + node.id)
+        print("inbound_node_connected: (" + self.id + "): " + node.id+ " ip: " + node.host + " port: " + str(node.port))
 
     def inbound_node_disconnected(self, node):
-        print("inbound_node_disconnected: (" + self.id + "): " + node.id)
+        print("inbound_node_disconnected: (" + self.id + "): " + node.id+ " ip: " + node.host + " port: " + str(node.port))
 
     def outbound_node_disconnected(self, node):
-        print("outbound_node_disconnected: (" + self.id + "): " + node.id)
+        print("outbound_node_disconnected: (" + self.id + "): " + node.id + " ip: " + node.host + " port: " + str(node.port))
 
     def node_message(self, node, data):
-        print("node_message (" + self.id + ") from " + node.id + ": " + str(data))
+        print("node_message (" + self.id + ") from " + node.id + " ip: " + node.host + " port: " + str(node.port) + " : " + str(data))
         
     def node_disconnect_with_outbound_node(self, node):
         print("node wants to disconnect with oher outbound node: (" + self.id + "): " + node.id)
